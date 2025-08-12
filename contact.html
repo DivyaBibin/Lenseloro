@@ -431,15 +431,35 @@
 	<div class="fb-block js-fb-block fb-block--7OOd6r fb-block--gridWithGaps">
 		<div class="fb-block__elements fb-block__header-elements fb-block--header-style-1">
 
-			<div class="fb-block__block-sizer"></div><img src="lenseloro_files/logoblack.png"/>
+			<div class="fb-block__block-sizer"></div>
 							<div class="fb-element fb-element--logo fb-element--mvaligned-center fb-element--el-1cf97c94 fb-element--m-lowest fb-element--m-highest" data-uuid="reK7W6">
     <div class="fb-element__content">
         <div class="fb-element-type-logo fb-element-type-logo--primary logo-content--text valign-d-center valign-t-center valign-m-center halign-d-left halign-t-left halign-m-left">
 	<a href="index.html">
-					<span class="site-logo--text">
-					&nbsp;&nbsp;&nbsp;Lenseloro
-			</span>
+		<div class="logo-container">
+			<img src="lenseloro_files/logoblack.png"/>
+						<span class="site-logo--text logotext">
+						Lenseloro
+				</span>
+			</div>
 			</a>
+			<style>
+				.logo-container {
+					display: flex;         /* Arrange children (img, span) in a row */
+					align-items: flex-end;  /* Vertically center the items in the row */
+ 					 gap: 2px;                  /* space between image and text */
+				}
+			  
+				.logo-container img {
+					height: auto; /* Or any specific height you want */
+					width: auto;             /* remove inline spacing below image */
+				}
+			  .logotext{
+				margin-bottom: 3px;
+                
+			  }
+				
+			  </style>
 </div>
     </div>
 </div>

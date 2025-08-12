@@ -433,24 +433,26 @@
 	<a href="index.html">
 		<div class="logo-container">
 			<img src="lenseloro_files/logowhite.png" alt="Lenseloro Logo" >
-			<span class="site-logo--text">
+			<span class="site-logo--text logotext">
 				Lenseloro
 			</span>
 			</div>
 			</a>
 			<style>
 				.logo-container {
-				  display: inline-flex;       /* put image and text in one line */
-				  align-items: center;        /* vertical alignment */
-				  gap: 2px;                   /* space between image and text */
+					display: flex;         /* Arrange children (img, span) in a row */
+					align-items: flex-end;  /* Vertically center the items in the row */
+ 					 gap: 2px;                  /* space between image and text */
 				}
 			  
 				.logo-container img {
-				  max-width: auto;            /* responsive but keeps original size unless container shrinks */
-				  height: auto;               /* maintain aspect ratio */
-				  display: block;              /* remove inline spacing below image */
+					height: auto; /* Or any specific height you want */
+					width: auto;             /* remove inline spacing below image */
 				}
-			  
+			  .logotext{
+				margin-bottom: 3px;
+                
+			  }
 				
 			  </style>
 </div>
@@ -758,7 +760,7 @@
 	</div>
     </div>
 </div>
-																									<div class="fb-element fb-element--text fb-element--el-118f9f7c" data-uuid="JOrnXD">
+	<div class="fb-element fb-element--text fb-element--el-118f9f7c" data-uuid="JOrnXD">
     <div class="fb-element__content">
         <div
 	class="fb-element-type-text element-text valign-d-top valign-t-top valign-m-bottom"
@@ -1025,7 +1027,7 @@
 >
 	<div class="text__text">
 		<p class="mobile-empty-p">&nbsp</p>
-		<h2><span data-default-color="var(--primary-headings)" style="color: var(--primary-headings);">Hi, I’m Jasim, a lifestyle photographer based in London.</span></h2>
+		<h4><span data-default-color="var(--primary-headings)" style="color: var(--primary-headings);">Hi, I’m Jasim, a lifestyle photographer based in London.</span></h4>
 		<p class="mobile-empty-p">&nbsp</p>
 	</div>
 </div>
