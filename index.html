@@ -426,15 +426,33 @@
 	<div class="fb-block js-fb-block fb-block--7OOd6r fb-block--gridWithGaps">
 		<div class="fb-block__elements fb-block__header-elements fb-block--header-style-1 fb-block--white-override">
 
-			<div class="fb-block__block-sizer"></div><img src="lenseloro_files/logowhite.png"/>
-							<div class="fb-element fb-element--logo fb-element--mvaligned-center fb-element--el-1cf97c94 fb-element--m-lowest fb-element--m-highest" data-uuid="reK7W6">
+			<div class="fb-block__block-sizer"></div>
+			<div class="fb-element fb-element--logo fb-element--mvaligned-center fb-element--el-1cf97c94 fb-element--m-lowest fb-element--m-highest" data-uuid="reK7W6">
     <div class="fb-element__content">
         <div class="fb-element-type-logo fb-element-type-logo--primary logo-content--text valign-d-center valign-t-center valign-m-center halign-d-left halign-t-left halign-m-left">
 	<a href="index.html">
+		<div class="logo-container">
+			<img src="lenseloro_files/logowhite.png" alt="Lenseloro Logo" >
 			<span class="site-logo--text">
-				&nbsp;&nbsp;&nbsp;Lenseloro
+				Lenseloro
 			</span>
+			</div>
 			</a>
+			<style>
+				.logo-container {
+				  display: inline-flex;       /* put image and text in one line */
+				  align-items: center;        /* vertical alignment */
+				  gap: 2px;                   /* space between image and text */
+				}
+			  
+				.logo-container img {
+				  max-width: auto;            /* responsive but keeps original size unless container shrinks */
+				  height: auto;               /* maintain aspect ratio */
+				  display: block;              /* remove inline spacing below image */
+				}
+			  
+				
+			  </style>
 </div>
     </div>
 </div>
@@ -1723,9 +1741,9 @@
 		
 		<div id="footer-section-pixieset-branding">
 			Powered by <a
-				target="_blank"
+				target="#"
 				rel="noopener noreferrer"
-				href="https:/www.lenseloro.com"
+				href="index.html"
 			>LENSELORO</a>
 		</div>
 		
