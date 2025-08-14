@@ -390,6 +390,69 @@
 		href="https://assets-pw.pixieset.com/assets/flex-client/static/css/flex-main.v-4ee2c6ea.css"
 	>
 	</link>
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Happy Birthday Text -->
+<div id="birthday-text">🎉 Happy Birthday! 🎉</div>
+
+<style>
+#birthday-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f17252;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+#birthday-text.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+</style>
+
+<script>
+window.onload = function() {
+    const textEl = document.getElementById('birthday-text');
+
+    // Fade in
+    textEl.classList.add('show');
+
+    // Fade out after 5 seconds
+    setTimeout(() => {
+        textEl.classList.remove('show');
+    }, 5000);
+
+    // Confetti burst
+    var duration = 3 * 1000;
+    var end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 5,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+        });
+        confetti({
+            particleCount: 5,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+};
+</script>
+
 
 		
 	</head>
@@ -433,7 +496,7 @@
 	<a href="index.html">
 		<div class="logo-container">
 			<img src="lenseloro_files/logowhitefill.png" alt="Lenseloro Logo" >
-			<span class="site-logo--text logotext">
+			<span class=" logotext site-logo--text">
 				Lenseloro
 			</span>
 			</div>
@@ -456,7 +519,7 @@
 					}
 			  .logotext{
 				margin-bottom: 3px;
-                
+			              
 			  }
 				
 			  </style>
@@ -1046,7 +1109,7 @@
 	<div
 	class="fb-element-type-image fb-element-type-image--use-overlay fb-element-type-image--use-border fb-radius"
 	style="
-	--border-width:5px;
+	--border-width:8px;
 	--border-color: var(--accent-details);
 	--overlay-color: #858484;
 	--overlay-opacity: 0.23;
