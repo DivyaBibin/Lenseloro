@@ -1,0 +1,8 @@
+# robots.txt for lenseloro.com
+
+# Allow all crawlers full access to the site
+User-agent: *
+Disallow:
+
+# Point to sitemap for better indexing
+Sitemap: https://lenseloro.com/sitemap.xml
