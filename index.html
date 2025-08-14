@@ -394,7 +394,7 @@
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <!-- Happy Birthday Text -->
-<div id="birthday-text">🎉 Happy Birthday! 🎉</div>
+<div id="birthday-text">Happy Birthday!</div>
 
 <style>
 #birthday-text {
@@ -402,8 +402,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 2rem;
     color: #f17252;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
     opacity: 0;
@@ -426,15 +425,15 @@ window.onload = function() {
     // Fade out after 5 seconds
     setTimeout(() => {
         textEl.classList.remove('show');
-    }, 5000);
+    }, 3000);
 
     // Confetti burst
-    var duration = 3 * 1000;
+    var duration = 2 * 1000;
     var end = Date.now() + duration;
 
     (function frame() {
         confetti({
-            particleCount: 5,
+            particleCount: 3,
             angle: 60,
             spread: 55,
             origin: { x: 0 }
