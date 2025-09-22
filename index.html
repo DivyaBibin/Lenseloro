@@ -350,72 +350,8 @@
 		href="https://assets-pw.pixieset.com/assets/flex-client/static/css/flex-main.v-4ee2c6ea.css"
 	>
 	</link>
-<!-- Confetti Library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-<!-- Happy Birthday Text -->
-<div id="birthday-text"></div>
-
-<style>
-#birthday-text {
-    position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-	font-weight: bold;
-	text-align: center;
-    color: #2d2d2e;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    opacity: 0;
-    z-index: 9999;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-#birthday-text.show {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1);
-}
-</style>
-
-<script>
-window.onload = function() {
-    const textEl = document.getElementById('birthday-text');
-
-    // Fade in
-    textEl.classList.add('show');
-
-    // Fade out after 5 seconds
-    setTimeout(() => {
-        textEl.classList.remove('show');
-    }, 3000);
-
-    // Confetti burst
-    var duration = 2 * 1000;
-    var end = Date.now() + duration;
-
-    (function frame() {
-        confetti({
-            particleCount: 3,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0 }
-        });
-        confetti({
-            particleCount: 5,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1 }
-        });
-
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-    }());
-};
-</script>
 
 
-		
 	</head>
 
 	<body class="theme-flex theme-skye-flex photo--protected client-side pixieset-branding-enabled">
